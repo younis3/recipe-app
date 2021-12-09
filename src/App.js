@@ -5,11 +5,9 @@ import Recipe from './components/Recipe/Recipe';
 
 function App() {
 
-
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState('');
   const [query, setQuery] = useState('chicken');
-
 
   useEffect(() => {
     getRecipes();
@@ -29,14 +27,14 @@ function App() {
   const getSearch = e => {
     e.preventDefault();
     setQuery(search);
-    document.getElementById("input").focus();
   }
+
 
   return (
     <div className="App">
       <h1 className="title">Recipe App</h1>
       <form onSubmit={getSearch} className='search-form'>
-        <input type='text' className='search-bar' id="input" placeholder="Search recipes, for example: Chicken" onChange={updateSearch}></input>
+        <input type='text' className='search-bar' placeholder="Search recipes, for example: Chicken" onChange={updateSearch}></input>
         <button type='submit' className='search-button'>Search</button>
       </form>
       <div className="recipes">
