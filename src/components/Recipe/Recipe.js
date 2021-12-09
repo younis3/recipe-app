@@ -8,9 +8,9 @@ const Recipe = ({ title, calories, ingredients, imgSRC, link }) => {
             <p className={style['calories']}>Total Calories: {calories}</p>
             <img className={style['img']} src={imgSRC} alt="" />
             <ul className={style['ingredients']}>ingredients:
-            {ingredients.map(ingredient => (
-                <li>{ingredient.text}</li>
-            ))}
+                {ingredients.map(ingredient => (
+                    <li>{ingredient.text}</li>
+                ))}
             </ul>
             <a className={style['link']} href={link} target="_blank">Open Recipe Details</a>
         </div>
