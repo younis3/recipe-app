@@ -5,9 +5,6 @@ import Recipe from './components/Recipe/Recipe';
 
 function App() {
 
-  const APP_ID = '1ffe52df';
-  const API_KEY = 'bfacaf593405da8d5d9dc4fb31a6a09f	';
-
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState('');
@@ -19,7 +16,7 @@ function App() {
   }, [query])
 
   const getRecipes = async () => {
-    const res = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${APP_ID}&app_key=${API_KEY}`);
+    const res = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${process.env.APP_ID}&app_key=${process.env.API_KEY}`);
     const data = await res.json();
     console.log(data);
     setRecipes(data.hits);
