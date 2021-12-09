@@ -54,7 +54,8 @@
   cursor: pointer;
   height: 5vh;
   margin: 2vh 0vw;
-  width: 32vw;
+  width: 14vw;
+  min-width: 146px;
   border: none;
   background-color: rgba(176, 199, 49, 0.616);
   border-radius: 5px;
