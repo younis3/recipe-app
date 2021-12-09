@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   min-height: 100vh;
-  background-image: linear-gradient(to top, #3e5250 0%, #332a38 100%);
+  background-image: linear-gradient(to top, #3e5250 0%, #2d2835e5 100%);
 }
 
 .title {
@@ -19,6 +19,7 @@
   height: 40px;
   border: none;
   border-radius: 5px;
+  padding: 4px;
 }
 
 .search-button {
