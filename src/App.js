@@ -42,7 +42,7 @@ function App() {
           <Recipe
             key={recipe.recipe.label + recipe.recipe.calories}
             title={recipe.recipe.label}
-            calories={recipe.recipe.calories.toFixed(2)}
+            calories={recipe.recipe.calories.toFixed()}
             ingredients={recipe.recipe.ingredients}
             imgSRC={recipe.recipe.image}
             link={recipe.recipe.url} />
