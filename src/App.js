@@ -32,24 +32,27 @@ function App() {
   const getSearch = e => {
     e.preventDefault();
     setQuery(search);
+    document.getElementById("input").focus();
   }
 
   return (
     <div className="App">
-      <h1>Recipe App</h1>
+      <h1 className="title">Recipe App</h1>
       <form onSubmit={getSearch} className='search-form'>
-        <input type='text' className='search-bar' onChange={updateSearch}></input>
+        <input type='text' className='search-bar' id="input" placeholder="Search recipes, for ex: chicken" onChange={updateSearch}></input>
         <button type='submit' className='search-button'>Search</button>
       </form>
-      {recipes.map(recipe => (
-        <Recipe 
-        key = {recipe.recipe.label + recipe.recipe.calories} 
-        title={recipe.recipe.label} 
-        calories= {recipe.recipe.calories.toFixed(2)} 
-        imgSRC = {recipe.recipe.image} />
-        
-      ))};
-      
+      <div className="recipes">
+        {recipes.map(recipe => (
+          <Recipe
+            key={recipe.recipe.label + recipe.recipe.calories}
+            title={recipe.recipe.label}
+            calories={recipe.recipe.calories.toFixed(2)}
+            ingredients={recipe.recipe.ingredients}
+            imgSRC={recipe.recipe.image}
+            link={recipe.recipe.url} />
+        ))};
+      </div>
     </div>
   );
 }
