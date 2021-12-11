@@ -1,11 +1,6 @@
-### Recipe REACT App
+#### Recipe REACT App
 
-#### Project Goals:
+###### API Used:
+Edamam API https://www.edamam.com/
 
-- Practicing REACT
-- Work with Edamam API
-- Enviroment Variables
-- REACT Deploys
-- CSS Responsive
-
-#### Demo Link: https://demorecipeapp.netlify.app/
+##### Demo Link: https://demorecipeapp.netlify.app/
