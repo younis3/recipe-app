@@ -5,33 +5,7 @@
 }
 
 .title {
-  padding-top: 12px;
-  color: white;
-}
-
-.search-form {
-  margin-top: 18px;
-  min-height: 10vh;
-}
-
-.search-bar {
-  width: 50%;
-  height: 40px;
-  border: none;
-  border-radius: 5px;
-  padding: 4px;
-}
-
-.search-button {
-  height: 40px;
-  margin-left: 6px;
-  width: 80px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: rgba(217, 252, 18, 0.616);
-  font-weight: bold;
-  font-size: small;
+  padding-top: 3.6vh;
   color: white;
 }
 

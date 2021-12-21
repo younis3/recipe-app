@@ -1,13 +1,15 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import './components/Recipe/Recipe';
-import Recipe from './components/Recipe/Recipe';
+import Recipe from './components/Recipe';
+import Favorites from './components/Favorites';
+import Nav from './components/Nav';
+import Search from './components/Search';
 
 function App() {
 
-  const [recipes, setRecipes] = useState([]);
-  const [search, setSearch] = useState('');
   const [query, setQuery] = useState('chicken');
+  const [recipes, setRecipes] = useState([]);
+
 
   useEffect(() => {
     const getRecipes = async () => {
@@ -20,24 +22,11 @@ function App() {
   }, [query])
 
 
-
-  const updateSearch = e => {
-    setSearch(e.target.value);
-  }
-
-  const getSearch = e => {
-    e.preventDefault();
-    setQuery(search);
-  }
-
-
   return (
     <div className="App">
-      <h1 className="title">Recipe App</h1>
-      <form onSubmit={getSearch} className='search-form'>
-        <input type='text' className='search-bar' placeholder="Search recipes, for example: Chicken" onChange={updateSearch}></input>
-        <button type='submit' className='search-button'>Search</button>
-      </form>
+      <h2 className="title">Recipe App</h2>
+      <Nav />
+      <Search setQuery={setQuery} />
       <div className="recipes">
         {recipes.map(recipe => (
           <Recipe

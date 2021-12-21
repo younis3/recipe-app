@@ -1,0 +1,25 @@
+.search-form {
+  margin-top: 12px;
+  min-height: 9vh;
+}
+
+.search-bar {
+  width: 50%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.search-button {
+  height: 40px;
+  margin-left: 6px;
+  width: 80px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgba(217, 252, 18, 0.616);
+  font-weight: bold;
+  font-size: small;
+  color: white;
+}
