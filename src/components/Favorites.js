@@ -1,13 +1,12 @@
-import React from 'react'
-import styles from '../styles/Recipe.module.css'
-
+import React from "react";
+import styles from "../styles/Recipe.module.css";
 
 const Favorites = () => {
-    return (
-        <div>
+  return (
+    <div>
+      <h1>Favorites Page</h1>
+    </div>
+  );
+};
 
-        </div>
-    )
-}
-
-export default Favorites
+export default Favorites;
