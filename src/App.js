@@ -10,15 +10,16 @@ function App() {
   const [query, setQuery] = useState('chicken');
 
   useEffect(() => {
+    const getRecipes = async () => {
+      const res = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${process.env.REACT_APP_APP_ID}&app_key=${process.env.REACT_APP_API_KEY}`);
+      const data = await res.json();
+      // console.log(data);
+      setRecipes(data.hits);
+    }
     getRecipes();
   }, [query])
 
-  const getRecipes = async () => {
-    const res = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${process.env.REACT_APP_APP_ID}&app_key=${process.env.REACT_APP_API_KEY}`);
-    const data = await res.json();
-    // console.log(data);
-    setRecipes(data.hits);
-  }
+
 
   const updateSearch = e => {
     setSearch(e.target.value);
@@ -40,7 +41,8 @@ function App() {
       <div className="recipes">
         {recipes.map(recipe => (
           <Recipe
-            key={recipe.recipe.label + recipe.recipe.calories}
+            // key={recipe.recipe.label + recipe.recipe.calories}
+            key={Math.random() * 1000}
             title={recipe.recipe.label}
             calories={recipe.recipe.calories.toFixed()}
             ingredients={recipe.recipe.ingredients}

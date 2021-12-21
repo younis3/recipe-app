@@ -9,10 +9,10 @@ const Recipe = ({ title, calories, ingredients, imgSRC, link }) => {
             <img className={style['img']} src={imgSRC} alt="" />
             <ul className={style['ingredients']}><span className={style['ingredient-title']}>Ingredients:</span>
                 {ingredients.map(ingredient => (
-                    <li>{ingredient.text}</li>
+                    <li key={Math.random() * 1000}>{ingredient.text}</li>
                 ))}
             </ul>
-            <button className={style['link-btn']}><a className={style['link']} href={link} target="_blank">Open Recipe Details</a></button>
+            <button className={style['link-btn']}><a className={style['link']} href={link} target="_blank" rel='noreferrer'>Open Recipe Details</a></button>
         </div>
     )
 }
