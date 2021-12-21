@@ -4,6 +4,7 @@ import Recipe from './components/Recipe';
 import Favorites from './components/Favorites';
 import Nav from './components/Nav';
 import Search from './components/Search';
+import Explore from './components/Explore';
 
 function App() {
 
@@ -27,22 +28,10 @@ function App() {
       <h2 className="title">Recipe App</h2>
       <Nav />
       <Search setQuery={setQuery} />
-      <div className="recipes">
-        {recipes.map(recipe => (
-          <Recipe
-            // key={recipe.recipe.label + recipe.recipe.calories}
-            key={Math.random() * 1000}
-            title={recipe.recipe.label}
-            calories={recipe.recipe.calories.toFixed()}
-            ingredients={recipe.recipe.ingredients}
-            imgSRC={recipe.recipe.image}
-            link={recipe.recipe.url} />
-        ))};
-      </div>
+      <Explore recipes={recipes} />
     </div>
   );
 }
-
 
 
 export default App;
