@@ -14,6 +14,23 @@ function App() {
   const [favorites, setFavorites] = useState([]);
 
 
+  //animate progress bar
+  useEffect(() => {
+    animateProgress();
+    window.addEventListener('scroll', animateProgress);
+  }, [])
+
+
+  const animateProgress = () => {
+    const app = document.querySelector('#app');
+    const progressBar = document.querySelector('#progress');
+    let scrollDistance = -app.getBoundingClientRect().top;
+    let progressWidth = (scrollDistance / (app.getBoundingClientRect().height - document.documentElement.clientHeight)) * 100;
+    let value = Math.floor(progressWidth);
+    progressBar.style.width = `${value + 4}%`;
+  }
+
+
   //get items from local storage
   useEffect(() => {
     //get fav list
@@ -35,7 +52,8 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
+      <div className="App" id="app">
+        <div className='progressBar' id='progress'></div>
         <Nav favorites={favorites} />
         <Routes>
           <Route
@@ -73,5 +91,6 @@ function App() {
     </Router>
   );
 }
+
 
 export default App;

@@ -1,7 +1,8 @@
 .navContainer {
   padding: 8px;
   list-style: none;
-  background-color: rgb(95, 99, 102);
+  /* background-color: rgb(95, 99, 102); */
+  background: linear-gradient(to right, #707270, #5c5956);
   text-align: center;
   margin: auto;
   margin-bottom: 2.6vh;

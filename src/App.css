@@ -3,3 +3,14 @@
   min-height: 100vh;
   background-image: linear-gradient(to top, #3e5250 0%, #2d2835e5 100%);
 }
+
+.progressBar {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  height: 5px;
+  /* background: linear-gradient(to right, #ff5f6d, #ffc371); */
+  background: linear-gradient(to right, #ec792c, #67e767);
+  width: 20%;
+}
