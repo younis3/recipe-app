@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Recipe from "./Recipe";
 import styles from "../styles/Recipes.module.css";
 

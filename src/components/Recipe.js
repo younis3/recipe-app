@@ -25,7 +25,7 @@ const Recipe = ({
     if (!x) {
       setHeart(false);
     }
-  }, [favorites]);
+  }, [favorites, link]);
 
   const favHandler = () => {
     let fav = {
