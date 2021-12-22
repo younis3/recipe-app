@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Recipe.module.css";
 
-const Recipe = ({ title, calories, ingredients, imgSRC, link, favorites, setFavorites }) => {
-
+const Recipe = ({
+  title,
+  calories,
+  ingredients,
+  imgSRC,
+  link,
+  favorites,
+  setFavorites,
+}) => {
   const [heart, setHeart] = useState(false);
 
   useEffect(() => {
@@ -18,27 +25,34 @@ const Recipe = ({ title, calories, ingredients, imgSRC, link, favorites, setFavo
     if (!x) {
       setHeart(false);
     }
-  }, [favorites])
+  }, [favorites]);
 
-
-  const AddFavHandler = () => {
-    let fav = { title: title, calories: calories, ingredients: ingredients, imgSRC: imgSRC, link: link };
+  const favHandler = () => {
+    let fav = {
+      title: title,
+      calories: calories,
+      ingredients: ingredients,
+      imgSRC: imgSRC,
+      link: link,
+    };
     for (let i = favorites.length - 1; i >= 0; i--) {
-      if (favorites[i].link === fav.link) {     // if already favorited, remove it
-        // favorites.splice(i, 1);
-        setFavorites(favorites.filter((el) => el.link !== fav.link));   //this method preffered since both filter and splice uses O(N)
+      if (favorites[i].link === fav.link) {
+        // if already favorited, remove it (after user confirm)
+        if (window.confirm(`Remove "${fav.title}" from favorites?`) === true) {
+          // favorites.splice(i, 1);
+          setFavorites(favorites.filter((el) => el.link !== fav.link)); //this method preffered since both filter and splice uses O(N)
+        }
         return;
       }
     }
     //  if not favorited, add it to favorites list
     setFavorites([...favorites, fav]);
-  }
-
+  };
 
   return (
     <div className={styles["recipe"]}>
       <div className={styles.titleContainer}>
-        <div className={styles.heart} onClick={AddFavHandler}>
+        <div className={styles.heart} onClick={favHandler}>
           {!heart && <i className="far fa-heart"></i>}
           {heart && <i className={`fas fa-heart ${styles.heartOn}`}></i>}
         </div>
@@ -65,6 +79,5 @@ const Recipe = ({ title, calories, ingredients, imgSRC, link, favorites, setFavo
     </div>
   );
 };
-
 
 export default Recipe;

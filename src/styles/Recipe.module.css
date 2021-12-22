@@ -6,7 +6,11 @@
   justify-content: space-around;
   align-items: center;
   width: 700px;
-  margin-bottom: 4vh;
+  margin-top: 3vh;
+}
+
+.recipe:first-child {
+  margin-top: 0vh;
 }
 
 .titleContainer {
@@ -19,11 +23,12 @@
   margin: 3vh -1.8vw;
   width: 106%;
   position: relative;
+  margin-bottom: 2vh;
 }
 
 .heart {
   position: absolute;
-  z-index: 999;
+  z-index: 1;
   left: 8%;
   font-size: 22px;
   padding: 2px;
@@ -40,13 +45,13 @@
 }
 
 .calories {
-  margin: 1vh 0vw;
+  margin: 0.4vh 0vw;
   color: rgb(30, 158, 41);
   font-weight: bold;
 }
 
 .img {
-  margin: 2vh 0vw;
+  margin: 1vh;
   border-radius: 50%;
   width: 200px;
   height: 200px;
@@ -78,6 +83,7 @@
   border: none;
   background-color: rgba(176, 199, 49, 0.616);
   border-radius: 5px;
+  margin-top: 0vh;
 }
 
 .link {
@@ -89,5 +95,10 @@
 @media only screen and (max-width: 750px) {
   .recipe {
     width: 85%;
+  }
+  .img {
+    width: 150px;
+    height: 150px;
+    border-radius: 40%;
   }
 }

@@ -5,7 +5,6 @@ import styles from "../styles/Recipes.module.css";
 const Favorites = ({ favorites, setFavorites }) => {
 
 
-
   return (
     <div>
       <div className={styles.recipes}>
@@ -26,5 +25,6 @@ const Favorites = ({ favorites, setFavorites }) => {
     </div>
   );
 };
+
 
 export default Favorites;

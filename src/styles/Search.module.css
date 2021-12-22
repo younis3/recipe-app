@@ -1,18 +1,18 @@
 .search-form {
-  margin-top: 20px;
-  min-height: 9vh;
+  padding-top: 0.4vh;
+  min-height: 8.6vh;
 }
 
 .search-bar {
   width: 50%;
-  height: 40px;
+  height: 43px;
   border: none;
   border-radius: 5px;
   padding: 4px;
 }
 
 .search-button {
-  height: 40px;
+  height: 43px;
   margin-left: 6px;
   width: 80px;
   border: none;

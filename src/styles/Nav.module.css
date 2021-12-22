@@ -1,13 +1,16 @@
 .navContainer {
   padding: 8px;
   list-style: none;
-  background-color: rgb(105, 104, 110);
+  background-color: rgb(95, 99, 102);
   text-align: center;
   margin: auto;
   margin-bottom: 2.6vh;
   width: 100%;
   overflow: hidden;
-  position: relative;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 2;
 }
 
 .title {
