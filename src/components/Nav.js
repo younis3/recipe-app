@@ -4,6 +4,8 @@ import styles from "../styles/Nav.module.css";
 
 const Nav = ({ favorites }) => {
 
+  const urlLocation = useLocation().pathname;
+
   const [favCount, setFavCount] = useState(0);
 
   useEffect(() => {
@@ -19,10 +21,10 @@ const Nav = ({ favorites }) => {
       </div>
       <ul className={styles.navbar}>
         <Link to="/explore" style={{ textDecoration: "none" }}>
-          <li className={`${styles.nav} ${useLocation().pathname === '/explore' ? styles.clickedNav : ''}`}>Explore</li>
+          <li className={`${styles.nav} ${urlLocation === '/explore' || urlLocation === '/' ? styles.clickedNav : ''}`}>Explore</li>
         </Link>
         <Link to="/favorites" style={{ textDecoration: "none" }}>
-          <li className={`${styles.nav} ${useLocation().pathname === '/favorites' ? styles.clickedNav : ''}`}>{`Favorites (${favCount})`}</li>
+          <li className={`${styles.nav} ${urlLocation === '/favorites' ? styles.clickedNav : ''}`}>{`Favorites (${favCount})`}</li>
         </Link>
       </ul>
     </div>
