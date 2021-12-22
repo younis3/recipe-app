@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "../styles/Search.module.css";
 
-const Search = ({ setQuery }) => {
+const Search = ({ query, setQuery }) => {
   const [search, setSearch] = useState("");
 
   const updateSearch = (e) => {

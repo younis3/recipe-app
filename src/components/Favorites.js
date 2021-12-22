@@ -1,10 +1,28 @@
-import React from "react";
-import styles from "../styles/Recipe.module.css";
+import React, { useEffect } from "react";
+import Recipe from "./Recipe";
+import styles from "../styles/Recipes.module.css";
 
-const Favorites = () => {
+const Favorites = ({ favorites, setFavorites }) => {
+
+
+
   return (
     <div>
-      <h1>Favorites Page</h1>
+      <div className={styles.recipes}>
+        {favorites.map((recipe) => (
+          <Recipe
+            key={Math.random() * 1000}
+            title={recipe.title}
+            calories={recipe.calories}
+            ingredients={recipe.ingredients}
+            imgSRC={recipe.imgSRC}
+            link={recipe.link}
+            favorites={favorites}
+            setFavorites={setFavorites}
+          />
+        ))}
+        ;
+      </div>
     </div>
   );
 };
