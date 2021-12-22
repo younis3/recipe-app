@@ -1,0 +1,35 @@
+.search-form {
+  padding-top: 0.4vh;
+  padding-bottom: 3vh;
+  min-height: 8.6vh;
+}
+
+.search-bar {
+  width: 50%;
+  height: 43px;
+  border: none;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.search-button {
+  height: 43px;
+  margin-left: 6px;
+  width: 80px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgba(217, 252, 18, 0.616);
+  font-weight: bold;
+  font-size: small;
+  color: white;
+}
+
+@media only screen and (max-width: 750px) {
+  .search-bar {
+    width: 76vw;
+  }
+  .search-button {
+    width: 15vw;
+  }
+}
