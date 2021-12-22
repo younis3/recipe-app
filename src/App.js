@@ -36,7 +36,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Nav />
+        <Nav favorites={favorites} />
         <Routes>
           <Route
             path="/"

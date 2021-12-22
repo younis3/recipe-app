@@ -1,5 +1,5 @@
 .search-form {
-  margin-top: 12px;
+  margin-top: 20px;
   min-height: 9vh;
 }
 
@@ -26,7 +26,7 @@
 
 @media only screen and (max-width: 750px) {
   .search-bar {
-    width: 70vw;
+    width: 76vw;
   }
   .search-button {
     width: 15vw;
