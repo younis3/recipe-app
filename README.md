@@ -5,10 +5,9 @@ Find Delicious Recipes!
 
 ###### Project Type: Front-End (REACT + Edamam API)
 
-<img src="https://github.com/younis3/recipe-app/blob/main/images/appDemo1.png" width=340 align=right>
 
 ---
-#### __
+
 
 ##### Project Features:
 
